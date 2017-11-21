@@ -1,2 +1,8 @@
 <h2>This is the kitten page</h2>
 <%= image_tag @kitten_url %>
+
+<%= link_to("More Kittens?", "#{kitties_url(100)}") %>
+
+| <%= link_to("Welcome Page", "#{welcome_url}") %>
+
+| <%= link_to("About Us", "#{about_url}") %>

@@ -3,3 +3,9 @@
 <% 5.times do %>
   <%= image_tag @kitten_url %>
 <% end %>
+
+<%= link_to("Kitten?", "#{kitty_url(100)}") %>
+
+| <%= link_to("Welcome Page", "#{welcome_url}") %>
+
+| <%= link_to("About Us", "#{about_url}") %>

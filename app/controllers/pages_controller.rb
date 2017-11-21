@@ -12,7 +12,7 @@ def kittens
 end
 
 def set_kitten_url
-  requested_size = params[:size]
+  requested_size = params[:size] || 200
   @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
 end
 

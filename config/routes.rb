@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   get '/welcome' => 'pages#welcome'
   get '/about'=> 'pages#about'
   get '/contest'=> 'pages#contest'
-  get '/' => 'pages#welcome'
+  root 'pages#welcome'
+  get 'kitten/' => 'pages#kitten'
+  get 'kittens' => 'pages#kittens'
 
+  get 'kitten/:size' => 'pages#kitten', as: 'kitty'
+  get 'kittens/:size' => 'pages#kittens', as: 'kitties'
 
-  get 'kitten/:size' => 'pages#kitten'
-  get 'kittens/:size' => 'pages#kittens'
-
-  get 'secrets/:magic_word' =>'pages#secrets'
+  get 'secrets/:magic_word' =>'pages#secrets', as: 'password'
 
 end

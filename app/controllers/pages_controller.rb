@@ -21,4 +21,14 @@ def contest
   redirect_to '/welcome'
 end
 
+def secrets
+  word = params[:magic_word]
+  if word != "code"
+    flash[:alert] = "Sorry, youre not authorized to see that page!"
+    redirect_to '/welcome'
+  else
+    flash[:alert] = "Correct answer!"
+  end
+end
+
 end
